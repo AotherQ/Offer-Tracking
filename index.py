@@ -189,7 +189,7 @@ def bul():
         girdi = request.json['giris']
         con = connect("stok.db")
         cursor = con.cursor()
-        cursor.execute(('SELECT * FROM Teklif WHERE Id=? or Firma=? or Urun=?'), (girdi,girdi,girdi))
+        cursor.execute(("SELECT * FROM Teklif WHERE Durum='Faturalandı'"), (girdi,girdi,girdi))
         rows = cursor.fetchall()
         con.close()
 
