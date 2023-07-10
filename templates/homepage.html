@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./toggle_home.css') }}">
+
+    
+</head>
+<body>
+    <div class="banner">
+        <div class="nav logo">Logo</div>
+        <div class="nav options">
+            
+            <ul>
+                <li class="opt"><a href="#" class="link" >Verilen Teklif</a></li>
+                <li class="opt"><a href="#" class="link" >Teklif Durumları</a></li>
+                <li class="opt"><a href="#"class="link" >Faturalar</a></li>
+            </ul>
+        </div>
+        <div id="uN" class="nav userm">User Name</div>
+    </div>
+
+
+    <div class="back"></div>
+    <label class="switch" >
+        <input class="check" type="checkbox" onclick="switch_open()" >
+        <span class="slider" ></span>
+    </label>
+
+    <div class="container" >
+        <div class="mainbox1">
+            
+
+            <a href="{{url_for('verilen_teklif')}}">
+                <div class="group" >
+                    <h1 class="header">Verilen Teklif</h1>
+                </div>
+            </a>
+
+            <a href="{{url_for('durum_page')}}">
+                <div class="group" >
+                    <h1 class="header">Teklif Durumları</h1>
+                </div>
+            </a>
+            
+            
+        </div>
+        
+
+        <div class="mainbox2">
+            
+
+            <a href="{{url_for('fatura_page')}}">
+                <div class="group" >
+                    <h1 class="header">Faturalar</h1>
+                </div>
+            </a>            
+        </div>
+        
+        
+    </div>
+    <script src="{{ url_for('static', filename='./toggle_home.js') }}"></script>
+    <script src="{{ url_for('static', filename='./homepage.js') }}"></script>
+
+    <script>
+        let a='{{kadi}}';
+        document.getElementById("uN").innerHTML=a;
+    </script>
+    
+</body>
+</html>
