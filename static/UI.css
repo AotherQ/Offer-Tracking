@@ -89,7 +89,7 @@ body{
     }
     
     .input-container{
-        height: 45vh;
+        min-height: 200px;
         width: 100vw;
     
         display: flex;
@@ -248,7 +248,7 @@ body{
     
     .input-container{
 
-        height: 45vh;
+        min-height: 200px;
         width: 100vw;
     
         display: flex;
