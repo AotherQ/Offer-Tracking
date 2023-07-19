@@ -183,18 +183,6 @@ def ara():
     con.close()
     return jsonify(rows)
 
-@app.route('/bul', methods=['POST'])
-def bul():
-    if request.method == 'POST':
-        girdi = request.json['giris']
-        con = connect("stok.db")
-        cursor = con.cursor()
-        cursor.execute(("SELECT * FROM Teklif WHERE Durum='Faturalandı'"), (girdi,girdi,girdi))
-        rows = cursor.fetchall()
-        con.close()
-
-        return jsonify(rows)
-
     
 if __name__== "__main__":
 
