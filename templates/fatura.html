@@ -25,20 +25,6 @@
       <span class="slider" ></span>
   </label>
 
-  <form action="/bul" method="POST" >
-    <div class="input-container">
-      <div class="input-box">
-        <label for="">Id/Firma Adı/Ürün Adı:</label>
-        <input type="text" name="giris" id="giris">
-      </div>
-      
-    </div>
-    
-  <div class="button-box">
-    <input id="submit-button" type="submit" value="Bul">
-  </div>
-    
-  </form>
   
 
   
@@ -63,7 +49,6 @@
   
   <script src="{{ url_for('static', filename='./fatura.js') }}"></script>
   <script src="{{ url_for('static', filename='./fatura_bul.js') }}"></script>
-  <script src="{{ url_for('static', filename='./tooggle_home.css') }}"></script>
   <script>
     let a='{{kadi}}';
     document.getElementById("uN").innerHTML=a;
