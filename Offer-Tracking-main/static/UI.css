@@ -1,0 +1,356 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.descrp, .container{
+    
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    transition: 1s;
+}
+@media screen and (min-width:920px){
+    .descrp, .container{
+        width: 50vw;
+    }
+    
+    
+    
+    .descrp{
+        background-color:rgba(190, 190, 190, 0.993) ;
+        position: absolute;
+        z-index: 99;
+        flex-direction: column;
+        gap: 30px;
+        border-right: 2px solid black;
+    }
+    .container p{
+        font-size: 18px;
+    }
+    
+    .descrp img, .parag{
+        width: 100%;
+    }
+    
+    .parag{
+        width: 80%;
+        background: transparent;
+        text-align: center;
+    }
+    
+    .button-container{
+        display: none;
+    }
+    
+    .drawer_btn{
+        width: 40%;
+        border-radius: 20px;
+        font-size: 20px;
+        background: transparent;
+        outline: none;
+        border: 2px solid black;
+        transition: .5s;
+    }
+    
+    .drawer_btn:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    
+    .box{
+        width: 400px;
+        height: 55vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid black;
+        border-radius: 25px;
+        background-color: white;
+    
+    
+    }
+    
+    .input-container{
+        height: 45vh;
+        width: 100vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .input-box{
+        position: relative;
+        margin-top: 6vh;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 40px;
+        border: 2px solid black;
+    
+        border-radius: 20px;
+    }
+    
+    .imp{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+    
+        font-size: 20px;
+    
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    label{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+    }
+    
+    .btn{
+    
+        margin-top: 4vh;
+        width: 60%;
+        height: 30px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        background: transparent;
+        transition: .5s ease-out;
+    }
+    
+    .btn:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    .input-container p{
+        margin-top: 6vh;
+    }
+    
+    .input-container a{
+        text-decoration: none;
+        
+    }
+    
+    a, p{
+        font-size: 20px;
+    }
+    
+    .anchor{
+    
+        cursor:pointer;
+        transition: .4s ease-out;
+        width: 100px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .anchor:hover{
+        background-color: black;
+        color: white;
+        
+    }
+    
+  
+}
+
+@media screen and (max-width:919px){
+    .descrp, .container{
+        width: 100vw;
+    }
+
+    .descrp{
+        background-color:rgba(190, 190, 190, 0.993) ;
+        position: absolute;
+        z-index: 99;
+        flex-direction: column;
+        gap: 30px;
+        border-right: 2px solid black;
+
+        transition: .5s;
+    }
+    
+    .descrp img, .parag{
+        width: 100%;
+    }
+    
+    .parag{
+        width: 80%;
+        background: transparent;
+        text-align: center;
+    }
+    
+    .button-container{
+        width: 60%;
+        height: 10%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .drawer_btn{
+        width: 40%;
+        border-radius: 20px;
+        font-size: 20px;
+        background: transparent;
+        outline: none;
+        border: 2px solid black;
+        transition: .5s;
+    }
+    
+    .drawer_btn:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    
+    .box{
+        width: 400px;
+        height: 55vh;
+    
+        display: flex;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 25px;
+        background-color: white;
+    
+    
+    }
+
+    .container p{
+        font-size: 18px;
+    }
+    
+    .input-container{
+
+        height: 45vh;
+        width: 100vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .input-box{
+        position: relative;
+        margin-top: 6vh;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 40px;
+        border: 2px solid black;
+    
+        border-radius: 20px;
+    }
+    
+    .imp{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+    
+        font-size: 20px;
+    
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    label{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+    }
+    
+    .btn{
+    
+        margin-top: 4vh;
+        width: 60%;
+        height: 30px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        background: transparent;
+        transition: .5s ease-out;
+    }
+    
+    .btn:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    .input-container p{
+        margin-top: 6vh;
+    }
+    
+    .input-container a{
+        text-decoration: none;
+        
+    }
+    
+    a, p{
+        font-size: 20px;
+    }
+    
+    .anchor{
+    
+        cursor:pointer;
+        transition: .4s ease-out;
+        width: 100px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .anchor:hover{
+        background-color: black;
+        color: white;
+        
+    }
+
+    #up{
+        position: absolute;
+        left: 0vw;
+    }
+
+    #in{
+        position: absolute;        
+        left: -100vw;
+    }
+
+
+    
+
+    
+}
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='./takip.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='./tooggle_home.css') }}">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="banner">
+    <div class="nav logo">Logo</div>
+    <div class="nav options">
+        
+        <ul>
+            <li class="opt"><a href="{{url_for('homepage')}}" class="link" >Geri Dön</a></li>
+        </ul>
+    </div>
+    <div id="uN" class="nav userm">User Name</div>
+
+  </div>
+  <label class="switch" >
+      <input class="check" type="checkbox" onclick="switch_open()" >
+      <span class="slider" ></span>
+  </label>
+
+  <form action="/bul" method="POST" >
+    <div class="input-container">
+      <div class="input-box">
+        <label for="">Id/Firma Adı/Ürün Adı:</label>
+        <input type="text" name="giris" id="giris">
+      </div>
+      
+    </div>
+    
+  <div class="button-box">
+    <input id="submit-button" type="submit" value="Bul">
+  </div>
+    
+  </form>
+  
+
+  
+  <div class="table-container">
+      <table id="product-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Firma</th>
+            <th>Ürün</th>
+            <th>Fiyat</th>
+            <th>Ürün Sayısı</th>
+            <th>Durum</th>
+          </tr>
+        </thead>
+        <tbody id="product-body"></tbody>
+      </table>
+  </div>
+
+
+
+  
+  <script src="{{ url_for('static', filename='./fatura.js') }}"></script>
+  <script src="{{ url_for('static', filename='./fatura_bul.js') }}"></script>
+  <script src="{{ url_for('static', filename='./tooggle_home.css') }}"></script>
+  <script>
+    let a='{{kadi}}';
+    document.getElementById("uN").innerHTML=a;
+  </script>
+</body>
+</html>
