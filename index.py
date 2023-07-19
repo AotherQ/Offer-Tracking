@@ -76,7 +76,7 @@ def signup():
         for b in l:
             if b[0]==nick or b[1]==sifre:
 
-                return render_template('signup.html')
+                return render_template('UI.html')
             
         
         #Eğer daha önce başka hesap yok ise burada kayıt yaptırılıyor.
@@ -85,7 +85,7 @@ def signup():
                 cursor.execute(("insert into users values(?,?)"),(nick,sifre))
             
         con.commit()
-        return render_template('signup.html')
+        return render_template('UI.html')
 
 
 @app.route('/verilen_teklif')
