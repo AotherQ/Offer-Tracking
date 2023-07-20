@@ -56,13 +56,13 @@ function pasw_vision(side){
         }
     }
     else if(side=='ipas'){
-        if(input_in.type== "password"){
-            input_in.type = "text";
+        if(input_up.type== "password"){
+            input_up.type = "text";
             icon_in.src = "./static/eyehidden.png";
             
         }
-        else if(input_in.type = "text"){
-            input_in.type = "password";
+        else if(input_up.type = "text"){
+            input_up.type = "password";
             icon_in.src = "./static/eyevisible.png";
         }
     }
